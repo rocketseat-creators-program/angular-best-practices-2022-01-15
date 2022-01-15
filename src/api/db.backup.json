@@ -1,0 +1,56 @@
+{
+  "courses": [
+    {
+      "name": "Ignite",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis commodo sem, in euismod ante consequat nec. Suspendisse eget molestie massa. Aliquam erat volutpat. Proin augue metus, volutpat non ullamcorper ac, vehicula in diam. Sed vehicula lectus eget augue aliquet, in suscipit nibh ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "id": 1
+    },
+    {
+      "name": "Experts Club",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget elementum lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at massa feugiat, ultrices orci ut, ullamcorper ante. In vel lectus placerat, congue turpis ut, tristique mauris. Curabitur id consequat mi. Etiam eleifend lacinia dictum. Aenean tortor augue, tristique facilisis velit in, sodales sollicitudin velit. Donec quam metus, tincidunt et sapien et, consequat tempor nisl. Mauris viverra quam at lectus posuere pulvinar.",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Discover",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar aliquet nisi, non auctor eros dapibus non. Donec in mi luctus, bibendum lectus sed, aliquet dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla suscipit metus a est malesuada, id bibendum odio laoreet. Morbi vitae mi non enim feugiat accumsan. Donec pharetra sit amet massa sed mollis. Etiam pharetra massa in mi tincidunt, a auctor justo convallis."
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Pedro Henrique Lacombe",
+      "email": "pedro@gmail.com",
+      "birthday": "1992-08-28",
+      "courseId": 1
+    },
+    {
+      "id": 2,
+      "name": "Ana Luisa",
+      "email": "aninha@gmail.com",
+      "birthday": "1993-04-01",
+      "courseId": 1
+    },
+    {
+      "name": "Leonardo da Silva",
+      "email": "leonardo@gmail.com",
+      "birthday": "1997-09-27",
+      "courseId": 1,
+      "id": 3
+    },
+    {
+      "name": "Mario Matheus de Andrades",
+      "email": "mario@gmail.com",
+      "birthday": "1995-05-12",
+      "courseId": 3,
+      "id": 4
+    },
+    {
+      "name": "Vanessa Dias da Silva",
+      "email": "vanessa@gmail.com",
+      "birthday": "1991-12-11",
+      "courseId": 1,
+      "id": 5
+    }
+  ]
+}
