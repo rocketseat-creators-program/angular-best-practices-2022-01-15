@@ -1,8 +1,13 @@
 <div class="d-flex align-items-center mb-4">
-    <button class="btn btn-outline-purple rounded-circle mr-4" routerLink="/courses/new">
-        <i class="fas fa-plus"></i>
-    </button>
-    
+    <div class="btn-group mr-3">
+        <button type="button" class="btn btn-outline-purple rounded-circle mr-sm-2" routerLink="/courses/new">
+            <i class="fas fa-plus"></i>
+        </button>
+        <button type="button" class="btn btn-outline-info rounded-circle" (click)="refresh()">
+            <i class="fas fa-sync-alt"></i>
+        </button>
+    </div>
+
     <h1 class="mb-0">Courses <span class="badge badge-purple">{{courses.length}}</span></h1>
 </div>
 

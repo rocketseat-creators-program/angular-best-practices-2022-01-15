@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HeaderComponent } from './layout/header/header.component';
 import { ContentComponent } from './layout/content/content.component';
@@ -22,6 +21,7 @@ const toastrConfig = {
   positionClass: 'toast-top-right'
 }
 
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -31,8 +31,7 @@ const toastrConfig = {
     CommonModule,
     RouterModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    
+
     NgbModule,
     NgxSpinnerModule,
     ToastrModule.forRoot(toastrConfig)

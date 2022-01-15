@@ -19,6 +19,10 @@ export class CoursesListComponent implements OnInit {
     this.loadCourses();
   }
 
+  refresh() {
+    this.loadCourses();
+  }
+
   private loadCourses() {
     this.coursesService.findAll().subscribe(response => {
       this.courses = response;
