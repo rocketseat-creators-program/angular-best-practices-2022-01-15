@@ -1,0 +1,5 @@
+<label>Course</label>
+<select class="form-control" [ngModel]="value" (ngModelChange)="onChangeCourse($event)">
+    <option [ngValue]="undefined" selected>Select</option>
+    <option [ngValue]="course.id" *ngFor="let course of courses">{{course.name}}</option>
+</select>

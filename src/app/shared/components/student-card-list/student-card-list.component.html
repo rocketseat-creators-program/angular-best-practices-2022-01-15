@@ -1,0 +1,18 @@
+<div class="alert alert-purple" role="alert" *ngIf="!students.length">
+    <h4 class="alert-heading">Oh no!!</h4>
+    <p>No students found! <a class="font-weight-bold" routerLink="/students/new">Click here</a> to register a new student.</p>
+</div>
+
+<div class="row" *ngIf="students.length">
+    <div class="col-sm-4 py-3" *ngFor="let student of students; trackBy: trackByStudentId">
+        <a class="card bg-gray" [routerLink]="['/students', student.id, 'edit']">
+            <div class="card-body">
+                <h5 class="card-title text-truncate">{{student.name | shortName}}</h5>
+                <p class="card-text mb-0">
+                    {{student.birthday |date:'dd/MM/yyyy'}} - {{student.birthday | age:'years'}}
+                </p>
+                <p class="card-text mb-0">{{student.email}}</p>
+            </div>
+        </a>
+    </div>
+</div>
