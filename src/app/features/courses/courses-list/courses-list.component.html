@@ -1,0 +1,31 @@
+<div class="d-flex align-items-center mb-4">
+    <div class="btn-group mr-3">
+        <button class="btn btn-outline-purple rounded-circle mr-sm-2" routerLink="/courses/new">
+            <i class="fas fa-plus"></i>
+        </button>
+        <button type="button" class="btn btn-outline-info rounded-circle" (click)="refresh()">
+            <i class="fas fa-sync-alt"></i>
+        </button>
+    </div>
+
+    <h1 class="mb-0">Courses <span class="badge badge-purple">{{courses.length}}</span></h1>
+</div>
+
+<div class="alert alert-purple" role="alert" *ngIf="!courses.length">
+    <h4 class="alert-heading">Oh no!!</h4>
+    <p>No courses found! <a class="font-weight-bold" routerLink="/courses/new">Click here</a> to register a new course.</p>
+</div>
+
+<div class="row" *ngIf="courses.length">
+    <div class="col-sm-4 py-3" *ngFor="let course of courses">
+        <div class="card bg-gray">
+            <a class="card-body" [routerLink]="['/courses', course.id, 'edit']">
+                <h5 class="card-title text-truncate">{{course.name || 'Course title'}}</h5>
+                <p class="card-text text-truncate">{{course.description || 'Course description'}}</p>
+            </a>
+            <a class="card-footer" [routerLink]="['/courses', course.id]">
+                Total students: <span class="badge badge-purple">{{course.students?.length || 0}}</span>
+            </a>
+        </div>
+    </div>
+</div>

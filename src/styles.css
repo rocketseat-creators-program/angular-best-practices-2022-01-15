@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+a {
+    text-decoration: none !important;
+}
+
+a, p, h1, h2, h3, h4, h5, label, small {
+    color: #FFFFFF !important;
+}
+
+body {
+    background-color: rgba(18, 18, 20, 1);
+}
+
+.navbar {
+    background-color: rgba(32, 32, 36, 1) !important;
+}
+
+
+/* Custom Badges */
+.badge-purple {
+    background-color: #8257e6;
+}
+
+/* Custom Alerts */
+.alert-purple {
+    background-color: #8257e6;
+    color: #FFFFFF;
+}
+
+/* Custom Buttons */
+.btn-outline-purple {
+    color: #8257e6;
+    background-color: transparent;
+    background-image: none;
+    border-color: #8257e6
+}
+
+.btn-outline-purple:hover {
+    color: #FFFFFF;
+    background-color: #8257e6;
+    border-color: #8257e6
+}
+
+/* Custom BG */
+.bg-gray {
+    background-color: rgba(32, 32, 36, 1);
+}

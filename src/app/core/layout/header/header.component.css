@@ -1,0 +1,16 @@
+a {
+    color: rgb(115, 115, 128) !important;
+}
+
+h1,
+span,
+.active a,
+a:hover {
+    color: #FFFFFF !important;
+}
+
+.active {
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-bottom: 2px solid #8257e6;
+}

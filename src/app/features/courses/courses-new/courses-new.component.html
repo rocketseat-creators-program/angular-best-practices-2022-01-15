@@ -1,0 +1,26 @@
+<form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+    <div class="d-flex align-items-center mb-4">
+        <div class="btn-group mr-4">
+            <button type="button" class="btn btn-outline-purple rounded-circle mr-2" routerLink="/courses">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button type="submit" class="btn btn-outline-success rounded-circle" [disabled]="!courseForm.valid">
+                <i class="fas fa-check-double"></i>
+            </button>
+        </div>
+
+        <h1 class="mb-0">New Course</h1>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Name</label>
+            <input type="email" class="form-control" formControlName="name" placeholder="Course name...">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <textarea cols="30" rows="6" class="form-control" formControlName="description"></textarea>
+    </div>
+</form>
