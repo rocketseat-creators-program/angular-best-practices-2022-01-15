@@ -1,0 +1,21 @@
+<div class="d-flex align-items-center mb-4">
+    <button class="btn btn-outline-purple rounded-circle mr-4" routerLink="/courses">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <h1 class="mb-0">Course: {{course.name}}</h1>
+</div>
+
+<h2 class="mb-3">Description</h2>
+<p>{{course.description}}</p>
+
+<div class="d-flex align-items-center my-4">
+    <button class="btn btn-outline-purple rounded-circle mr-4" routerLink="/students/new" [queryParams]="{ cid: course.id }">
+        <i class="fas fa-plus"></i>
+    </button>
+    
+    <h2 class="mb-0">Students <span class="badge badge-purple">{{course.students?.length}}</span></h2>
+</div>
+<app-student-card-list
+    [students]="course.students">
+</app-student-card-list>

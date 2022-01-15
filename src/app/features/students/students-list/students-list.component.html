@@ -1,0 +1,16 @@
+<div class="d-flex align-items-center mb-4">
+    <div class="btn-group mr-3">
+        <button type="button" class="btn btn-outline-purple rounded-circle mr-sm-2" routerLink="/students/new">
+            <i class="fas fa-plus"></i>
+        </button>
+        <button type="button" class="btn btn-outline-info rounded-circle" (click)="refresh()">
+            <i class="fas fa-sync-alt"></i>
+        </button>
+    </div>
+
+    <h1 class="mb-0">Students <span class="badge badge-purple">{{students.length}}</span></h1>
+</div>
+
+<app-student-card-list
+    [students]="students">
+</app-student-card-list>

@@ -1,0 +1,38 @@
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <div class="d-flex align-items-center mb-4">
+        <div class="btn-group mr-4">
+            <button type="button" class="btn btn-outline-purple rounded-circle mr-2" [routerLink]="redirectUrl">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button type="submit" class="btn btn-outline-success rounded-circle" [disabled]="!studentForm.valid">
+                <i class="fas fa-check-double"></i>
+            </button>
+        </div>
+
+        <h1 class="mb-0">New Student</h1>
+    </div>
+
+    <div class="form-row">
+        <app-select-course
+            class="form-group col-sm-4"
+            formControlName="courseId">
+        </app-select-course>
+
+        <div class="form-group col-sm-8">
+            <label>Name</label>
+            <input type="email" class="form-control" formControlName="name" placeholder="Name...">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="Email...">
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Birthday</label>
+            <input type="date" class="form-control" formControlName="birthday">
+        </div>
+    </div>
+</form>

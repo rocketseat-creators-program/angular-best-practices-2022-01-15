@@ -1,0 +1,11 @@
+<div class="d-flex align-items-center mb-4">
+    <button class="btn btn-outline-purple rounded-circle mr-4" routerLink="/courses/new">
+        <i class="fas fa-plus"></i>
+    </button>
+    
+    <h1 class="mb-0">Courses <span class="badge badge-purple">{{courses.length}}</span></h1>
+</div>
+
+<app-course-card-list
+    [courses]="courses">
+</app-course-card-list>
