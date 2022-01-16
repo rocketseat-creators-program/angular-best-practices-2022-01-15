@@ -53,7 +53,7 @@ export class StudentsNewComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', Validators.required],
       birthday: ['', Validators.required],
-      courseId: [this.cid || 'undefined', Validators.required]
+      courseId: [this.cid || '', Validators.required]
     });
   }
 

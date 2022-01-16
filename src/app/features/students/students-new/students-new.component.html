@@ -16,7 +16,7 @@
         <div class="form-group col-sm-4">
             <label>Course</label>
             <select class="form-control" formControlName="courseId">
-                <option [value]="undefined" selected>Select</option>
+                <option value="" selected>Select</option>
                 <option [ngValue]="course.id" *ngFor="let course of courses">{{course.name}}</option>
             </select>
         </div>
