@@ -1,9 +1,9 @@
-<div class="alert alert-purple" role="alert" *ngIf="!courses.length">
+<div class="alert alert-purple" role="alert" *ngIf="!courses?.length">
     <h4 class="alert-heading">Oh no!!</h4>
     <p>No courses found! <a class="font-weight-bold" routerLink="/courses/new">Click here</a> to register a new course.</p>
 </div>
 
-<div class="row" *ngIf="courses.length">
+<div class="row" *ngIf="courses?.length">
     <div class="col-sm-4 py-3" *ngFor="let course of courses; trackBy: trackByCourseId">
         <div class="card bg-gray">
             <a class="card-body" [routerLink]="['/courses', course.id, 'edit']">

@@ -26,7 +26,7 @@ export class StudentsNewComponent implements OnInit {
   ngOnInit(): void {
     const { cid } = this.activatedRoute.snapshot.queryParams;
 
-    if (cid && !isNaN(cid)) {
+    if (!isNaN(cid)) {
       this.cid = parseInt(cid);
     }
 
@@ -50,7 +50,7 @@ export class StudentsNewComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', Validators.required],
       birthday: ['', Validators.required],
-      courseId: [this.cid || undefined, Validators.required]
+      courseId: [this.cid, Validators.required]
     });
   }
 

@@ -20,7 +20,7 @@ export class CoursesService {
     return this.http.put<Course>(`${this.apiUrl}/${id}`, course);
   }
 
-  findById(id: number | string) {
+  findById(id: number) {
     return this.http.get<Course>(`${this.apiUrl}/${id}?_embed=students`);
   }
 

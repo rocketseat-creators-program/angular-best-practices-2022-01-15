@@ -16,21 +16,19 @@ import { CoursesService } from 'src/app/features/courses/courses.service';
 export class SelectCourseComponent implements OnInit, ControlValueAccessor {
 
   courses: Course[] = [];
-  value!: number | undefined;
+  value: number | undefined;
 
-  onChange: any = () => { };
-  onTouched: any = () => { };
+  onTouched!: () => void;
+  onChange!: (value: number) => void;
 
-  constructor(
-    private coursesService: CoursesService
-  ) { }
+  constructor(private coursesService: CoursesService) { }
 
   ngOnInit(): void {
     this.loadCourses();
   }
 
-  writeValue(value: any): void {
-    this.value = value && !isNaN(value) ? parseInt(value) : undefined;
+  writeValue(value: number): void {
+    this.value = value || undefined;
   }
 
   registerOnChange(fn: any): void {
@@ -42,6 +40,7 @@ export class SelectCourseComponent implements OnInit, ControlValueAccessor {
   }
 
   onChangeCourse(course: number) {
+    this.onTouched();
     this.onChange(course);
   }
 

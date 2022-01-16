@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Course } from '../course';
+import { Router } from '@angular/router';
 import { CoursesService } from '../courses.service';
 
 @Component({
@@ -11,20 +10,15 @@ import { CoursesService } from '../courses.service';
 })
 export class CoursesNewComponent implements OnInit {
 
-  course!: Course;
   courseForm!: FormGroup;
 
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
-    private activatedRoute: ActivatedRoute,
     private coursesService: CoursesService
   ) { }
 
   ngOnInit(): void {
-    const { course } = this.activatedRoute.snapshot.data;
-    this.course = course;
-
     this.buildForm();
   }
 
