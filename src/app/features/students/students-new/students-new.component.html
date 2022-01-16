@@ -1,7 +1,7 @@
 <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
     <div class="d-flex align-items-center mb-4">
-        <div class="btn-group mr-4">
-            <button type="button" class="btn btn-outline-purple rounded-circle mr-2" [routerLink]="redirectUrl">
+        <div class="btn-group mr-3">
+            <button type="button" class="btn btn-outline-purple rounded-circle mr-sm-2" [routerLink]="redirectUrl">
                 <i class="fas fa-arrow-left"></i>
             </button>
             <button type="submit" class="btn btn-outline-success rounded-circle" [disabled]="!studentForm.valid">

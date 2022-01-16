@@ -37,4 +37,5 @@ export class StudentResolver implements Resolve<Student | null> {
   private navigateToStudentsUrl() {
     this.router.navigateByUrl("/students");
   }
+
 }

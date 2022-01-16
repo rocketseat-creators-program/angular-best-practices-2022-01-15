@@ -8,15 +8,15 @@
         </button>
     </div>
 
-    <h1 class="mb-0">Students <span class="badge badge-purple">{{students.length}}</span></h1>
+    <h1 class="mb-0">Students <span class="badge badge-purple">{{students?.length}}</span></h1>
 </div>
 
-<div class="alert alert-purple" role="alert" *ngIf="!students.length">
+<div class="alert alert-purple" role="alert" *ngIf="!students?.length">
     <h4 class="alert-heading">Oh no!!</h4>
     <p>No students found! <a class="font-weight-bold" routerLink="/students/new">Click here</a> to register a new student.</p>
 </div>
 
-<div class="row" *ngIf="students.length">
+<div class="row" *ngIf="students?.length">
     <div class="col-sm-4 py-3" *ngFor="let student of students">
         <a class="card bg-gray" [routerLink]="['/students', student.id, 'edit']">
             <div class="card-body">

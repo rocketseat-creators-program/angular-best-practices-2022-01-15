@@ -15,8 +15,8 @@ import { StudentsService } from '../students.service';
 })
 export class StudentsEditComponent implements OnInit {
 
-  courses!: Course[];
   student!: Student;
+  courses: Course[] = [];
   studentForm!: FormGroup;
 
   constructor(

@@ -12,7 +12,7 @@ import { StudentsService } from '../students.service';
 })
 export class StudentsNewComponent implements OnInit {
 
-  courses!: Course[];
+  courses: Course[] = [];
   studentForm!: FormGroup;
 
   cid?: number;
@@ -28,7 +28,7 @@ export class StudentsNewComponent implements OnInit {
   ngOnInit(): void {
     const { cid } = this.activatedRoute.snapshot.queryParams;
 
-    if (cid && !isNaN(cid)) {
+    if (!isNaN(cid)) {
       this.cid = parseInt(cid);
     }
 
