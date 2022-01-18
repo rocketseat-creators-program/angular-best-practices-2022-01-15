@@ -8,6 +8,8 @@ import { CoursesListComponent } from './courses-list/courses-list.component';
 import { CoursesDetailComponent } from './courses-detail/courses-detail.component';
 import { CoursesNewComponent } from './courses-new/courses-new.component';
 
+import { SharedModule } from 'src/app/shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { CoursesNewComponent } from './courses-new/courses-new.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    CoursesRoutingModule
+    CoursesRoutingModule,
+
+    SharedModule
   ]
 })
 export class CoursesModule { }
